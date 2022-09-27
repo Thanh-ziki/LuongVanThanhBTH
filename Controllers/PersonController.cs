@@ -8,13 +8,20 @@ public class PersonController : Controller
         List<Person> stdList= new List<Person>()
         {
             new Person {ID = "số", Password= 3, NickName = 36},
-            new Person {ID = "dá", Password= 2, NickName = 75}
+            new Person {ID = "dá", Password= 2, NickName = 75},
             new Person {ID = "dá", Password= 2, NickName = 75}
         };
         ViewData["Người Dùng"] = stdList;
         return View();
      }
      [HttpPost]
-     public IActionResult Create(ID std)
+     public IActionResult Create(Person std)
+    {   
+        // string message = std.StudentID +"-";
+        // message += std.StudentName + "-";
+        // mesage += std.Age;
+        // ViewBag.TT = message;
+        return View();
+    }
 
 }
